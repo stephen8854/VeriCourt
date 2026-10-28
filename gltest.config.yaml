@@ -1,0 +1,10 @@
+# Integration-test configuration for `gltest` (not used by direct tests).
+# Phase 1 runs no integration tests and makes no StudioNet transactions.
+networks:
+  default: studionet
+
+  # Hosted Studio, chain 61999. Gasless; built-in network config is used.
+  studionet: {}
+
+paths:
+  contracts: "contracts"

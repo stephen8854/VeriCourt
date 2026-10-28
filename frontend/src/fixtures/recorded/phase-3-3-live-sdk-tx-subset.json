@@ -1,0 +1,39 @@
+{
+  "source": "Phase 3.3: genlayer-js 1.1.8 client.getTransaction() in a browser (Chrome 152) against StudioNet, 2026-10-17. Verbatim subset of the returned object (selected fields only; nothing altered).",
+  "transaction": {
+    "hash": "0xaf54746cdd8d48e04fc7d270dfd3d750678ddaf1eb0162196ee5d55247528122",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "result": 6,
+    "result_name": "MAJORITY_AGREE",
+    "num_of_rounds": "1",
+    "consensus_data": {
+      "leader_receipt": [
+        {
+          "mode": "leader",
+          "vote": null,
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRJTkNPTkNMVVNJVkU=",
+            "status": "return",
+            "payload": {
+              "raw": [100, 73, 78, 67, 79, 78, 67, 76, 85, 83, 73, 86, 69],
+              "readable": "\"INCONCLUSIVE\""
+            }
+          }
+        },
+        {
+          "mode": "validator",
+          "vote": "idle",
+          "execution_result": "ERROR",
+          "result": { "raw": "AmlkbGU=", "status": "contract_error", "payload": "idle" }
+        }
+      ]
+    },
+    "last_round": {
+      "result": 6,
+      "validator_votes_name": ["IDLE", "IDLE", "AGREE", "AGREE", "AGREE"],
+      "validator_votes": [5, 5, 1, 1, 1]
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "source": "integration-logs/studionet-smoke-2026-10-16T08-56-13.587740+00-00.json",
+  "reads_latest_final": {
+    "get_case": {
+      "agreement_summary": "[VeriCourt integration test - fictional data] Fictional agreement: build a demo widget with a settings page and an export button.",
+      "assessment_attempts": 1,
+      "case_id": "VC-000001",
+      "category": "SOFTWARE",
+      "claim": "Fictional claim: the export button was not delivered and the settings page is incomplete.",
+      "claimant": "0x7Fd1AB64CE04475e6a4428DB223ED8cc8752118c",
+      "claimant_evidence_count": 1,
+      "created_at": 1792141023,
+      "evidence_count": 2,
+      "expected_deliverable": "Fictional deliverable: widget source code and a short readme.",
+      "history_count": 6,
+      "issues": [
+        {
+          "description": "Export button missing",
+          "issue_id": "I1"
+        },
+        {
+          "description": "Settings page incomplete",
+          "issue_id": "I2"
+        }
+      ],
+      "last_assessment_error": "",
+      "lock_reason": "REPLY_SUBMITTED",
+      "locked_at": 1792141069,
+      "locked_evidence_count": 2,
+      "max_assessment_attempts": 2,
+      "replied_at": 1792141069,
+      "reply": "Fictional reply: the settings scope was reduced by agreement; the export button was postponed, not dropped.",
+      "reply_deadline": 1792144623,
+      "reply_window_seconds": 3600,
+      "requested_remedy": "Fictional remedy: deliver the export button or refund the final milestone.",
+      "respondent": "0xF6D21722B1EA6BdDc1453287617Aec176ae23Fd1",
+      "respondent_evidence_count": 1,
+      "response_state": "SUBMITTED",
+      "schema_version": "vericourt-case-v1",
+      "snapshot_digest": "7e8533fb72625341391054633360b3f71be50148ea3b52fb6997382d7588137a",
+      "snapshot_locked": true,
+      "status": "DECIDED",
+      "title": "[VeriCourt integration test - fictional data] Demo widget"
+    },
+    "get_case_evidence": [
+      {
+        "content_ref": "Scope item 3: an export button that downloads data as CSV.",
+        "description": "Excerpt from the fictional statement of work.",
+        "evidence_id": "E1",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1"
+        ],
+        "label": "Fictional scope excerpt",
+        "sha256": "",
+        "submitted_at": 1792141042,
+        "submitter": "0x7Fd1AB64CE04475e6a4428DB223ED8cc8752118c",
+        "submitter_role": "CLAIMANT"
+      },
+      {
+        "content_ref": "Client approved a reduced settings page on day 10; export button postponed.",
+        "description": "Fictional note about the settings page.",
+        "evidence_id": "E2",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1",
+          "I2"
+        ],
+        "label": "Fictional change note",
+        "sha256": "",
+        "submitted_at": 1792141055,
+        "submitter": "0xF6D21722B1EA6BdDc1453287617Aec176ae23Fd1",
+        "submitter_role": "RESPONDENT"
+      }
+    ],
+    "get_case_history": [
+      {
+        "action": "CASE_CREATED",
+        "actor": "0x7Fd1AB64CE04475e6a4428DB223ED8cc8752118c",
+        "at": 1792141023,
+        "detail": "reply_deadline=1792144623; issues=2",
+        "seq": 1
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0x7Fd1AB64CE04475e6a4428DB223ED8cc8752118c",
+        "at": 1792141042,
+        "detail": "E1 by CLAIMANT",
+        "seq": 2
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0xF6D21722B1EA6BdDc1453287617Aec176ae23Fd1",
+        "at": 1792141055,
+        "detail": "E2 by RESPONDENT",
+        "seq": 3
+      },
+      {
+        "action": "REPLY_SUBMITTED",
+        "actor": "0xF6D21722B1EA6BdDc1453287617Aec176ae23Fd1",
+        "at": 1792141069,
+        "detail": "",
+        "seq": 4
+      },
+      {
+        "action": "SNAPSHOT_LOCKED",
+        "actor": "0xF6D21722B1EA6BdDc1453287617Aec176ae23Fd1",
+        "at": 1792141069,
+        "detail": "REPLY_SUBMITTED; evidence_count=2",
+        "seq": 5
+      },
+      {
+        "action": "ASSESSMENT_DECIDED",
+        "actor": "0x7Fd1AB64CE04475e6a4428DB223ED8cc8752118c",
+        "at": 1792141085,
+        "detail": "attempt=1; outcome=INCONCLUSIVE",
+        "seq": 6
+      }
+    ],
+    "get_assessment_status": {
+      "attempts": 1,
+      "can_request": false,
+      "case_id": "VC-000001",
+      "has_assessment": true,
+      "last_error": "",
+      "max_attempts": 2,
+      "remaining_attempts": 0,
+      "schema_version": "vericourt-assessment-v2",
+      "status": "DECIDED"
+    },
+    "get_assessment": {
+      "assessed_at": 1792141085,
+      "attempt": 1,
+      "case_id": "VC-000001",
+      "exists": true,
+      "issue_findings": [
+        {
+          "confidence": "LOW",
+          "counter_evidence_ids": [],
+          "determination": "UNRESOLVED",
+          "finding": "The record does not establish whether the export button was missing in breach of agreement or legitimately postponed.",
+          "issue_id": "I1",
+          "open_questions": [
+            "Was there documented client approval for postponing the export button?",
+            "What was the actual delivered state of the widget regarding export functionality?",
+            "Were there any documented communications about scope changes?"
+          ],
+          "reasoning": "E1 documents the original requirement for an export button. E2 documents respondent's assertion that the export button was postponed with client approval. The claimant does not provide evidence contradicting E2's assertion about postponement, nor does respondent provide corroboration of client approval beyond their own statement. Both items represent uncorroborated assertions by each party about the status of the export button. Without corroborating evidence of either the missing delivery or the agreed postponement, the issue remains unresolved.",
+          "supporting_evidence_ids": []
+        },
+        {
+          "confidence": "LOW",
+          "counter_evidence_ids": [],
+          "determination": "UNRESOLVED",
+          "finding": "The record does not establish whether the settings page was incomplete or properly reduced by agreement.",
+          "issue_id": "I2",
+          "open_questions": [
+            "What documentation exists of the client's approval for reduced settings?",
+            "What specific features were missing from the delivered settings page?",
+            "Were there acceptance criteria defining completeness?"
+          ],
+          "reasoning": "E2 contains respondent's assertion that client approved a reduced settings page. The claimant alleges incompleteness but provides no evidence documenting the delivered state or contradicting the approval assertion. The respondent's assertion about client approval is uncorroborated. Without evidence documenting either the incomplete delivery or the agreed reduction, the issue cannot be resolved.",
+          "supporting_evidence_ids": []
+        }
+      ],
+      "limitations": [
+        "No evidence documents the actual delivered widget or its functionality",
+        "No corroborating evidence exists for alleged scope change approvals",
+        "No communication records show discussions about scope changes",
+        "No acceptance criteria or testing results are provided",
+        "Both parties rely on uncorroborated assertions about key facts"
+      ],
+      "methodology_version": "vericourt-method-v2",
+      "notices": [
+        "The respondent's reply was part of the assessed record."
+      ],
+      "outcome": "INCONCLUSIVE",
+      "provenance": {
+        "consensus_compared": {
+          "issue_findings[].determination": "a validator agreed only if, for every issue, both were UNRESOLVED, or both were SUPPORTED/PARTIALLY_SUPPORTED and shared at least one supporting evidence id, or both were NOT_SUPPORTED and shared at least one counter evidence id; any other pair disagrees; stored value is the leader's",
+          "outcome": "derived by the contract from the determinations; must match exactly across validators"
+        },
+        "contract_generated": [
+          "notices",
+          "standard_notices",
+          "response_state",
+          "snapshot_digest"
+        ],
+        "display_notice": "The outcome and issue determinations were accepted through contract validation and validator agreement. The remedy view is an advisory note from the leader's model: it was not compared across validators, and the contract replaces it with CANNOT_ASSESS if it contradicts the outcome. The summary, findings, reasoning, confidence, open questions and limitations were written by the leader's model and were not independently checked for accuracy, completeness or neutrality.",
+        "leader_generated_constrained": {
+          "remedy_assessment": "advisory; written by the leader's model; not compared across validators; replaced by CANNOT_ASSESS when it contradicts the derived outcome"
+        },
+        "leader_generated_unverified": [
+          "summary",
+          "issue_findings[].finding",
+          "issue_findings[].reasoning",
+          "issue_findings[].confidence",
+          "issue_findings[].open_questions",
+          "limitations"
+        ],
+        "partially_checked": {
+          "issue_findings[].counter_evidence_ids": "same as supporting_evidence_ids",
+          "issue_findings[].supporting_evidence_ids": "every id exists in the locked record; for agreeing definite findings each validator shared at least one id in the list for the same direction; the full list is the leader's; a shared id does not show the evidence is relevant or that validators read it the same way"
+        }
+      },
+      "remedy_assessment": "CANNOT_ASSESS",
+      "response_state": "SUBMITTED",
+      "schema_version": "vericourt-assessment-v2",
+      "snapshot_digest": "7e8533fb72625341391054633360b3f71be50148ea3b52fb6997382d7588137a",
+      "standard_notices": [
+        "This is an AI-assisted assessment of the submitted record, not legal advice, a court judgment, or a binding arbitration award.",
+        "Validator consensus means independent validators agreed on the result; it is not a guarantee of objective truth.",
+        "A file hash helps verify file integrity; it does not prove that a file is authentic or true."
+      ],
+      "summary": "A neutral review of a fictional dispute about a demo widget development. The claimant alleges missing export button functionality and incomplete settings page. The respondent alleges scope reduction by agreement and postponement of export feature. Evidence includes conflicting scope documentation and change notes."
+    }
+  },
+  "harness_last_views": {
+    "ambiguous.create_case": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"VC-000001\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "ambiguous.submit_evidence_E1": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E1\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "ambiguous.submit_evidence_E2": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E2\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "ambiguous.submit_reply": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "null",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "ambiguous.request_assessment": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"INCONCLUSIVE\"",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "ambiguous.request_assessment.finality": {
+      "category": "FINALIZED_SUCCESS",
+      "status_name": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "final": true,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"INCONCLUSIVE\"",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    }
+  }
+}

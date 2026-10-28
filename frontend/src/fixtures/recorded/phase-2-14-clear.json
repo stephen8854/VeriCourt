@@ -1,0 +1,298 @@
+{
+  "source": "integration-logs/studionet-smoke-2026-10-16T05-39-17.680948+00-00.json",
+  "reads_latest_final": {
+    "get_case": {
+      "agreement_summary": "[VeriCourt integration test - fictional data] Fictional fixed-price agreement for a demo widget. Signed acceptance criteria: (1) a settings page with theme and language options; (2) an export button that downloads the user's data as a CSV file. The final milestone is payable when both criteria are delivered.",
+      "assessment_attempts": 1,
+      "case_id": "VC-000001",
+      "category": "SOFTWARE",
+      "claim": "Fictional claim: the v1.0 build delivered as final does not include the CSV export button required by acceptance criterion 2.",
+      "claimant": "0xA0bb997366B0f0f7433Efa42b21EFc6Ae6c84d9a",
+      "claimant_evidence_count": 1,
+      "created_at": 1792129181,
+      "evidence_count": 2,
+      "expected_deliverable": "Fictional deliverable: the v1.0 widget build meeting both acceptance criteria, plus release notes.",
+      "history_count": 6,
+      "issues": [
+        {
+          "description": "The v1.0 build delivered as final does not include the CSV export button required by acceptance criterion 2.",
+          "issue_id": "I1"
+        }
+      ],
+      "last_assessment_error": "",
+      "lock_reason": "REPLY_SUBMITTED",
+      "locked_at": 1792129225,
+      "locked_evidence_count": 2,
+      "max_assessment_attempts": 2,
+      "replied_at": 1792129225,
+      "reply": "Fictional reply: we accept that the CSV export button is not in the v1.0 build. We believe the final payment should still be released because the rest of the widget is complete.",
+      "reply_deadline": 1792132781,
+      "reply_window_seconds": 3600,
+      "requested_remedy": "Fictional remedy: deliver the CSV export button within 14 days, or refund the final milestone.",
+      "respondent": "0x0bC755C95Ad5Bfe37570a00Ac2b4496C3A7405b9",
+      "respondent_evidence_count": 1,
+      "response_state": "SUBMITTED",
+      "schema_version": "vericourt-case-v1",
+      "snapshot_digest": "1ec469fc902ebf5758a34f42674aab736c37bc5bf99d05a07adc10828af07e42",
+      "snapshot_locked": true,
+      "status": "DECIDED",
+      "title": "[VeriCourt integration test - fictional data] CSV export acceptance"
+    },
+    "get_case_evidence": [
+      {
+        "content_ref": "Acceptance criterion 2: the widget includes an export button that downloads the user's data as a CSV file. Signed by both parties on day 1.",
+        "description": "Fictional excerpt from the acceptance criteria signed by both parties on day 1.",
+        "evidence_id": "E1",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1"
+        ],
+        "label": "Signed acceptance criteria (excerpt)",
+        "sha256": "",
+        "submitted_at": 1792129198,
+        "submitter": "0xA0bb997366B0f0f7433Efa42b21EFc6Ae6c84d9a",
+        "submitter_role": "CLAIMANT"
+      },
+      {
+        "content_ref": "v1.0 (final build). Included: widget; settings page with theme and language options. Known gaps: CSV export is not implemented in this release.",
+        "description": "Fictional release notes published by the respondent with the final build.",
+        "evidence_id": "E2",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1"
+        ],
+        "label": "Respondent's v1.0 release notes",
+        "sha256": "",
+        "submitted_at": 1792129212,
+        "submitter": "0x0bC755C95Ad5Bfe37570a00Ac2b4496C3A7405b9",
+        "submitter_role": "RESPONDENT"
+      }
+    ],
+    "get_case_history": [
+      {
+        "action": "CASE_CREATED",
+        "actor": "0xA0bb997366B0f0f7433Efa42b21EFc6Ae6c84d9a",
+        "at": 1792129181,
+        "detail": "reply_deadline=1792132781; issues=1",
+        "seq": 1
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0xA0bb997366B0f0f7433Efa42b21EFc6Ae6c84d9a",
+        "at": 1792129198,
+        "detail": "E1 by CLAIMANT",
+        "seq": 2
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0x0bC755C95Ad5Bfe37570a00Ac2b4496C3A7405b9",
+        "at": 1792129212,
+        "detail": "E2 by RESPONDENT",
+        "seq": 3
+      },
+      {
+        "action": "REPLY_SUBMITTED",
+        "actor": "0x0bC755C95Ad5Bfe37570a00Ac2b4496C3A7405b9",
+        "at": 1792129225,
+        "detail": "",
+        "seq": 4
+      },
+      {
+        "action": "SNAPSHOT_LOCKED",
+        "actor": "0x0bC755C95Ad5Bfe37570a00Ac2b4496C3A7405b9",
+        "at": 1792129225,
+        "detail": "REPLY_SUBMITTED; evidence_count=2",
+        "seq": 5
+      },
+      {
+        "action": "ASSESSMENT_DECIDED",
+        "actor": "0xA0bb997366B0f0f7433Efa42b21EFc6Ae6c84d9a",
+        "at": 1792129240,
+        "detail": "attempt=1; outcome=CLAIM_SUPPORTED",
+        "seq": 6
+      }
+    ],
+    "get_assessment_status": {
+      "attempts": 1,
+      "can_request": false,
+      "case_id": "VC-000001",
+      "has_assessment": true,
+      "last_error": "",
+      "max_attempts": 2,
+      "remaining_attempts": 0,
+      "schema_version": "vericourt-assessment-v2",
+      "status": "DECIDED"
+    },
+    "get_assessment": {
+      "assessed_at": 1792129240,
+      "attempt": 1,
+      "case_id": "VC-000001",
+      "exists": true,
+      "issue_findings": [
+        {
+          "confidence": "HIGH",
+          "counter_evidence_ids": [],
+          "determination": "SUPPORTED",
+          "finding": "The submitted evidence supports the claimant’s position that the final v1.0 build did not include the CSV export button required by acceptance criterion 2.",
+          "issue_id": "I1",
+          "open_questions": [],
+          "reasoning": "E1 documents the agreed acceptance criterion that the widget must include an export button downloading user data as a CSV file. E2, the respondent’s release notes for the final build, documents that CSV export was a known gap and was not implemented in v1.0. These two items directly address both the requirement and the alleged omission. No submitted evidence documents that the CSV export button was actually included in the final build. The respondent’s reply is consistent with E2, but the determination is supported by the documentary evidence itself.",
+          "supporting_evidence_ids": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "limitations": [
+        "The agreement summary and expected deliverable were treated as context, not independent proof.",
+        "Only the text labels, descriptions, and reference fields of E1 and E2 were considered; no linked files were opened.",
+        "The record is limited to whether the CSV export button was included in v1.0, not broader payment or contractual consequences.",
+        "No technical build, source code, or test evidence was submitted beyond the release-note description.",
+        "This assessment is advisory and based only on the submitted case record."
+      ],
+      "methodology_version": "vericourt-method-v2",
+      "notices": [
+        "The respondent's reply was part of the assessed record."
+      ],
+      "outcome": "CLAIM_SUPPORTED",
+      "provenance": {
+        "consensus_compared": {
+          "issue_findings[].determination": "a validator agreed only if, for every issue, both were UNRESOLVED, or both were SUPPORTED/PARTIALLY_SUPPORTED and shared at least one supporting evidence id, or both were NOT_SUPPORTED and shared at least one counter evidence id; any other pair disagrees; stored value is the leader's",
+          "outcome": "derived by the contract from the determinations; must match exactly across validators"
+        },
+        "contract_generated": [
+          "notices",
+          "standard_notices",
+          "response_state",
+          "snapshot_digest"
+        ],
+        "display_notice": "The outcome and issue determinations were accepted through contract validation and validator agreement. The remedy view is an advisory note from the leader's model: it was not compared across validators, and the contract replaces it with CANNOT_ASSESS if it contradicts the outcome. The summary, findings, reasoning, confidence, open questions and limitations were written by the leader's model and were not independently checked for accuracy, completeness or neutrality.",
+        "leader_generated_constrained": {
+          "remedy_assessment": "advisory; written by the leader's model; not compared across validators; replaced by CANNOT_ASSESS when it contradicts the derived outcome"
+        },
+        "leader_generated_unverified": [
+          "summary",
+          "issue_findings[].finding",
+          "issue_findings[].reasoning",
+          "issue_findings[].confidence",
+          "issue_findings[].open_questions",
+          "limitations"
+        ],
+        "partially_checked": {
+          "issue_findings[].counter_evidence_ids": "same as supporting_evidence_ids",
+          "issue_findings[].supporting_evidence_ids": "every id exists in the locked record; for agreeing definite findings each validator shared at least one id in the list for the same direction; the full list is the leader's; a shared id does not show the evidence is relevant or that validators read it the same way"
+        }
+      },
+      "remedy_assessment": "SUPPORTED",
+      "response_state": "SUBMITTED",
+      "schema_version": "vericourt-assessment-v2",
+      "snapshot_digest": "1ec469fc902ebf5758a34f42674aab736c37bc5bf99d05a07adc10828af07e42",
+      "standard_notices": [
+        "This is an AI-assisted assessment of the submitted record, not legal advice, a court judgment, or a binding arbitration award.",
+        "Validator consensus means independent validators agreed on the result; it is not a guarantee of objective truth.",
+        "A file hash helps verify file integrity; it does not prove that a file is authentic or true."
+      ],
+      "summary": "The record describes a fixed-price software agreement with acceptance criteria including a settings page and a CSV export button. The claimant alleges the final v1.0 build lacked the CSV export button. The evidence includes a signed acceptance-criteria excerpt stating criterion 2 requires an export button that downloads user data as CSV, and the respondent’s v1.0 release notes stating CSV export was not implemented in that release. The respondent’s reply also states they accept the CSV export button is not in v1.0, though party replies are allegations unless corroborated. On the submitted record, there is documentary evidence both of the requirement and of its absence from the final build."
+    }
+  },
+  "harness_last_views": {
+    "clear.create_case": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"VC-000001\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "clear.submit_evidence_E1": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E1\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "clear.submit_evidence_E2": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E2\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "clear.submit_reply": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "null",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "clear.request_assessment": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"CLAIM_SUPPORTED\"",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "clear.request_assessment.finality": {
+      "category": "FINALIZED_SUCCESS",
+      "status_name": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "final": true,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"CLAIM_SUPPORTED\"",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    }
+  }
+}

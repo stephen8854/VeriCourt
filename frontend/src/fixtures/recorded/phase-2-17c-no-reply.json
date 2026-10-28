@@ -1,0 +1,298 @@
+{
+  "source": "integration-logs/studionet-smoke-2026-10-17T07-02-42.747189+00-00.json",
+  "reads_latest_final": {
+    "get_case": {
+      "agreement_summary": "[VeriCourt integration test - fictional data] Fictional agreement: the respondent writes three 800-word blog articles on garden irrigation, due 14 days after the order. A 50 percent deposit was paid up front.",
+      "assessment_attempts": 1,
+      "case_id": "VC-000001",
+      "category": "WRITING",
+      "claim": "Fictional claim: none of the three articles was ever delivered.",
+      "claimant": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+      "claimant_evidence_count": 2,
+      "created_at": 1792220603,
+      "evidence_count": 2,
+      "expected_deliverable": "Fictional deliverable: three 800-word articles sent to the claimant by email.",
+      "history_count": 6,
+      "issues": [
+        {
+          "description": "None of the three articles was delivered by the due date.",
+          "issue_id": "I1"
+        }
+      ],
+      "last_assessment_error": "",
+      "lock_reason": "REPLY_WINDOW_EXPIRED",
+      "locked_at": 1792224340,
+      "locked_evidence_count": 2,
+      "max_assessment_attempts": 2,
+      "replied_at": 0,
+      "reply": "",
+      "reply_deadline": 1792224203,
+      "reply_window_seconds": 3600,
+      "requested_remedy": "Fictional remedy: refund of the deposit.",
+      "respondent": "0xa618c7857B836357947e6Fd504FaC4cc5b439197",
+      "respondent_evidence_count": 0,
+      "response_state": "NO_RESPONSE_BY_DEADLINE",
+      "schema_version": "vericourt-case-v1",
+      "snapshot_digest": "9a0a744a448e61ea4e4ed462e216315917faa819c472d30b6bf8e3376369e313",
+      "snapshot_locked": true,
+      "status": "DECIDED",
+      "title": "[VeriCourt integration test - fictional data] Three blog articles"
+    },
+    "get_case_evidence": [
+      {
+        "content_ref": "I checked my inbox and spam folder. I never received any of the three articles.",
+        "description": "Fictional statement written by the claimant for this dispute.",
+        "evidence_id": "E1",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1"
+        ],
+        "label": "Claimant's statement",
+        "sha256": "",
+        "submitted_at": 1792220620,
+        "submitter": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "submitter_role": "CLAIMANT"
+      },
+      {
+        "content_ref": "Order: 3 blog articles, 800 words each, due 14 days after the order. Deposit 50 percent paid.",
+        "description": "Fictional order confirmation sent to both parties when the work was ordered.",
+        "evidence_id": "E2",
+        "evidence_type": "TEXT",
+        "in_locked_snapshot": true,
+        "issue_ids": [
+          "I1"
+        ],
+        "label": "Order confirmation (excerpt)",
+        "sha256": "",
+        "submitted_at": 1792220633,
+        "submitter": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "submitter_role": "CLAIMANT"
+      }
+    ],
+    "get_case_history": [
+      {
+        "action": "CASE_CREATED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792220603,
+        "detail": "reply_deadline=1792224203; issues=1",
+        "seq": 1
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792220620,
+        "detail": "E1 by CLAIMANT",
+        "seq": 2
+      },
+      {
+        "action": "EVIDENCE_SUBMITTED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792220633,
+        "detail": "E2 by CLAIMANT",
+        "seq": 3
+      },
+      {
+        "action": "REPLY_WINDOW_EXPIRED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792224340,
+        "detail": "no reply recorded by deadline; this is a procedural fact, not proof against the respondent",
+        "seq": 4
+      },
+      {
+        "action": "SNAPSHOT_LOCKED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792224340,
+        "detail": "REPLY_WINDOW_EXPIRED; evidence_count=2",
+        "seq": 5
+      },
+      {
+        "action": "ASSESSMENT_DECIDED",
+        "actor": "0xb111Bd9D67fF65A0123d865837f22d77c6A8AEF8",
+        "at": 1792224355,
+        "detail": "attempt=1; outcome=INCONCLUSIVE",
+        "seq": 6
+      }
+    ],
+    "get_assessment_status": {
+      "attempts": 1,
+      "can_request": false,
+      "case_id": "VC-000001",
+      "has_assessment": true,
+      "last_error": "",
+      "max_attempts": 2,
+      "remaining_attempts": 0,
+      "schema_version": "vericourt-assessment-v2",
+      "status": "DECIDED"
+    },
+    "get_assessment": {
+      "assessed_at": 1792224355,
+      "attempt": 1,
+      "case_id": "VC-000001",
+      "exists": true,
+      "issue_findings": [
+        {
+          "confidence": "HIGH",
+          "counter_evidence_ids": [],
+          "determination": "UNRESOLVED",
+          "finding": "The evidence is insufficient to establish that the articles were not delivered. The claimant's statement is an uncorroborated assertion, and the order confirmation does not document delivery status.",
+          "issue_id": "I1",
+          "open_questions": [
+            "Are there email logs or metadata showing transmission of the articles?",
+            "Did the respondent send the articles to a different address?"
+          ],
+          "reasoning": "E1 is the claimant's own assertion that they never received the articles. Under the assessment principles, an uncorroborated assertion by a party does not establish a fact, and the respondent's silence does not corroborate it. E2 documents the existence of the order and its terms but provides no information regarding whether the deliverables were sent or received. Consequently, there is no evidence in the record that documents the fact of non-delivery.",
+          "supporting_evidence_ids": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "limitations": [
+        "The record lacks independent verification of email transmission or non-transmission.",
+        "The respondent did not participate, leaving the claimant's allegations uncontested but uncorroborated."
+      ],
+      "methodology_version": "vericourt-method-v2",
+      "notices": [
+        "The respondent did not reply before the deadline. This is recorded as a procedural fact only; it is not treated as evidence that the claim is correct."
+      ],
+      "outcome": "INCONCLUSIVE",
+      "provenance": {
+        "consensus_compared": {
+          "issue_findings[].determination": "a validator agreed only if, for every issue, both were UNRESOLVED, or both were SUPPORTED/PARTIALLY_SUPPORTED and shared at least one supporting evidence id, or both were NOT_SUPPORTED and shared at least one counter evidence id; any other pair disagrees; stored value is the leader's",
+          "outcome": "derived by the contract from the determinations; must match exactly across validators"
+        },
+        "contract_generated": [
+          "notices",
+          "standard_notices",
+          "response_state",
+          "snapshot_digest"
+        ],
+        "display_notice": "The outcome and issue determinations were accepted through contract validation and validator agreement. The remedy view is an advisory note from the leader's model: it was not compared across validators, and the contract replaces it with CANNOT_ASSESS if it contradicts the outcome. The summary, findings, reasoning, confidence, open questions and limitations were written by the leader's model and were not independently checked for accuracy, completeness or neutrality.",
+        "leader_generated_constrained": {
+          "remedy_assessment": "advisory; written by the leader's model; not compared across validators; replaced by CANNOT_ASSESS when it contradicts the derived outcome"
+        },
+        "leader_generated_unverified": [
+          "summary",
+          "issue_findings[].finding",
+          "issue_findings[].reasoning",
+          "issue_findings[].confidence",
+          "issue_findings[].open_questions",
+          "limitations"
+        ],
+        "partially_checked": {
+          "issue_findings[].counter_evidence_ids": "same as supporting_evidence_ids",
+          "issue_findings[].supporting_evidence_ids": "every id exists in the locked record; for agreeing definite findings each validator shared at least one id in the list for the same direction; the full list is the leader's; a shared id does not show the evidence is relevant or that validators read it the same way"
+        }
+      },
+      "remedy_assessment": "CANNOT_ASSESS",
+      "response_state": "NO_RESPONSE_BY_DEADLINE",
+      "schema_version": "vericourt-assessment-v2",
+      "snapshot_digest": "9a0a744a448e61ea4e4ed462e216315917faa819c472d30b6bf8e3376369e313",
+      "standard_notices": [
+        "This is an AI-assisted assessment of the submitted record, not legal advice, a court judgment, or a binding arbitration award.",
+        "Validator consensus means independent validators agreed on the result; it is not a guarantee of objective truth.",
+        "A file hash helps verify file integrity; it does not prove that a file is authentic or true."
+      ],
+      "summary": "The claimant alleges the respondent failed to deliver three blog articles as agreed. The respondent did not reply to the claim. The record contains the claimant's statement of non-receipt and an order confirmation establishing the original agreement terms."
+    }
+  },
+  "harness_last_views": {
+    "no_reply.create_case": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"VC-000001\"",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "no_reply.submit_evidence_E1": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E1\"",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "no_reply.submit_evidence_E2": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"E2\"",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "no_reply.process_reply_deadline": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "null",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "no_reply.request_assessment": {
+      "category": "ACCEPTED_SUCCESS",
+      "status_name": "ACCEPTED",
+      "result_name": "MAJORITY_AGREE",
+      "final": false,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"INCONCLUSIVE\"",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "no_reply.request_assessment.finality": {
+      "category": "FINALIZED_SUCCESS",
+      "status_name": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "final": true,
+      "leader_execution_result": "SUCCESS",
+      "leader_result_status": "return",
+      "leader_result_payload": "\"INCONCLUSIVE\"",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    }
+  }
+}

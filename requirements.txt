@@ -1,0 +1,4 @@
+# Contract tooling only (no backend). Versions verified installable on
+# Python 3.14.7 in Phase 1; genlayer-test declares support for 3.12/3.13.
+genvm-linter==0.11.0
+genlayer-test==0.29.2
