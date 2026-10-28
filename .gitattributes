@@ -1,0 +1,2 @@
+# Keep LF everywhere: contracts/vericourt.py must hash to the deployed contract (SHA-256 25bc9e0b...).
+* text=auto eol=lf
